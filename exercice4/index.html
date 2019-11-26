@@ -5,27 +5,29 @@
     <title>Exercice 4</title>
   </head>
   <body>
-    <form name="form1">
+    <form>
       <div>
-        <label for="name">Prénom :</label>
-        <input type="text" name="firstname" value="" />
-      </div>
-      <!-- <div>
-        <label for="name">Nom :</label>
-        <input type="text" name="lastname" value="" />
+        <label for="firstname">Prénom :</label>
+        <input type="text" name="firstname" id="firstname" value="" />
       </div>
       <div>
-        <label for="name">Ville :</label>
-        <input type="text" name="city" value="" />
-      </div> -->
+        <label for="lastname">Nom :</label>
+        <input type="text" name="lastname" id="lastname" value="" />
+      </div>
       <div>
-        <input type="button" name="button" value="Valider" onclick="control(form1)" />
+        <label for="city">Ville :</label>
+        <input type="text" name="city" id="city" value="" />
+      </div>
+      <div>
+        <input type="button" name="button" value="Valider" onClick="control()" />
       </div>
     </form>
     <script>
-    function control(form1) {
-      var infos = document.form1.input.value;
-      alert("Vos informations:" + infos );
+      function control() {
+      var firstname = document.getElementById('firstname').value;
+      var lastname = document.getElementById('lastname').value;
+      var city = document.getElementById('city').value;
+      alert(`Vos informations : ${lastname} ${firstname} ${city}`);
     }
     </script>
   </body>
